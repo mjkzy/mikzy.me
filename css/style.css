@@ -25,10 +25,10 @@ a:hover, a:focus {
     text-align: center;
     color: #000000;
     text-decoration: none;
-  }
+}
   
-  .photoShit a {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-  }
+.photoShit a {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
