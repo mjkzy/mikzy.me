@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta name="viewport" content="width=device-width" />
+
+  <link rel="icon" href="favicon.png">
+  <title>mikzy.me - Plutonium API</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet" />
+</head>
+
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-set-preferred-mode-onload="true">
+  
+  <p id="demo">This only shows when the window is more than 500.</p>
+  <p id="message" style="display: none;">Please use this on a desktop.</p>
+  
+  <script>
+    if (window.innerWidth < 500){
+        document.getElementById("demo").style.display = "none";
+        document.getElementById("message").style.display = "block";
+    }
+    </script>
+
+  <div class="page-wrapper with-navbar with-sidebar">
+    <div class="sticky-alerts"></div>
+
+    <div class="sidebar">
+      <div class="sidebar-menu">
+        <!-- Sidebar links and titles -->
+        <h5 class="sidebar-title">Testing</h5>
+        <div class="sidebar-divider"></div>
+        <a href="plutoniumapiprofile.html" class="sidebar-link">Plutonium Profile Lookup</a>
+        <a href="#" class="sidebar-link">Testing 2</a>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="navbar-content">
+        <button id="toggle-sidebar-btn" class="btn btn-action" type="button" onclick="halfmoon.toggleSidebar()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <a href="./index.html" class="navbar-brand">
+          mikzy.me
+        </a>
+        <ul class="navbar-nav d-none d-md-flex">
+          <li class="nav-item">
+            <a href="testing.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a href="plutoniumapiprofile.html" class="nav-link">Plutonium API</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-content ml-auto">
+        <button class="btn btn-action mr-5" type="button" onclick="halfmoon.toggleDarkMode()" aria-label="Toggle dark mode">
+          <i class="fa fa-moon-o" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="content-wrapper">
+      <!-- content shit -->
+      <div class="container-fluid">
+        <!-- Username Lookup Card -->
+        <div class="w-300 container py-10">
+            <div class="card">
+              <h2 class="card-title">
+                Profile Lookup
+              </h2>
+              <p class="text-muted">
+                <input type="text" id="username-txt" class="form-control" placeholder="Username" value="">
+              </p>
+              <div class="text-center">
+                <script src="js/mikzy.js"></script>
+                <a href="#" button class="btn btn-primary" type="button" onclick="dolookupfunc()">Submit</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- need a good way to filter info -->
+        <!-- Bordered table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>UID</th>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Banned</th>
+              <th>Joined</th>
+              <th>Last Online</th>
+              <th>Location</th>
+              <th>About</th>
+              <th>Last Post</th>
+              <th>Website</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><label id="uidtable1"></label></th>
+              <th><label id="ranktable1"></label></th>
+              <td><label id="nametable1"></label></td>
+              <td><label id="bannedtable1"></label></td>
+              <td><label id="joinedtable1"></label></td>
+              <td><label id="lastonlinetable1"></label></td>
+              <td><label id="locationtable1"></label></td>
+              <td><label id="abouttable1"></label></td>
+              <td><label id="lastposttable1"></label></td>
+              <td><label id="websiteposttable1"></label></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th><label id="uidtable2"></label></th>
+              <th><label id="ranktable2"></label></th>
+              <td><label id="nametable2"></label></td>
+              <td><label id="bannedtable2"></label></td>
+              <td><label id="joinedtable2"></label></td>
+              <td><label id="lastonlinetable2"></label></td>
+              <td><label id="locationtable2"></label></td>
+              <td><label id="abouttable2"></label></td>
+              <td><label id="lastposttable2"></label></td>
+              <td><label id="websiteposttable2"></label></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th><label id="uidtable3"></label></th>
+              <th><label id="ranktable3"></label></th>
+              <td><label id="nametable3"></label></td>
+              <td><label id="bannedtable3"></label></td>
+              <td><label id="joinedtable3"></label></td>
+              <td><label id="lastonlinetable3"></label></td>
+              <td><label id="locationtable3"></label></td>
+              <td><label id="abouttable3"></label></td>
+              <td><label id="lastposttable3"></label></td>
+              <td><label id="websiteposttable3"></label></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th><label id="uidtable4"></label></th>
+              <th><label id="ranktable4"></label></th>
+              <td><label id="nametable4"></label></td>
+              <td><label id="bannedtable4"></label></td>
+              <td><label id="joinedtable4"></label></td>
+              <td><label id="lastonlinetable4"></label></td>
+              <td><label id="locationtable4"></label></td>
+              <td><label id="abouttable4"></label></td>
+              <td><label id="lastposttable4"></label></td>
+              <td><label id="websiteposttable4"></label></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+</body>
+</html>
