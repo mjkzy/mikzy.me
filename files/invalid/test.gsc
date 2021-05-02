@@ -13,7 +13,7 @@ onplayerconnect()
     for(;;)
     {
         level waittill("connected", player);
-		    player thread onplayerspawned();
+	player thread onplayerspawned();
     }
 }
 
@@ -24,6 +24,6 @@ onplayerspawned()
     for(;;)
     {
         self waittill("spawned_player");
-        self iprintln("working!");
+        self iprintln("working! yay");
     }
 }
