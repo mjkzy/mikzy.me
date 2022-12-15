@@ -34,12 +34,15 @@ body {
     font-family: "Lato", Arial, sans-serif;
     font-size: 40px;
     font-weight: bold;
+    font-style: italic;
+    text-shadow: 2px 2px #000000;
 }
 
 .textstuff text2 {
     font-family: "Lato", Arial, sans-serif;
     font-size: 22px;
     font-weight: 300;
+    text-shadow: 2px 2px #000000;
 }
 
 main, body, html {
